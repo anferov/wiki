@@ -1,7 +1,28 @@
 version: '3.4'
 services:
-# php-fpm
-# nginx
+  php-fpm:
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    container_name: wiki_php
+    volumes:
+      - ./source/app:/srv/www/wiki
+    expose:
+      - 9000
+
+  nginx:
+    build:
+      context: ./docker/nginx
+    container_name: wiki_nginx
+    command: bash -c "exec nginx -g 'daemon off;'"
+    volumes:
+      - ./source/app:/srv/www/wiki
+    working_dir: /srv/www/wiki
+    ports:
+      - 80:80
+    depends_on:
+      - "php-fpm"
+
 # swagger
 # plantuml
 # volumes
