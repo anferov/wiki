@@ -30,3 +30,7 @@ vendor-dev:
 .PHONY: logs
 logs:
 	docker-compose logs -f
+
+.PHONY: m
+m:
+	docker-compose exec -T php-fpm bash -c "php bin/console make$(E)"

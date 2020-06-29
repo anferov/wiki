@@ -112,6 +112,9 @@
     "egulias/email-validator": {
         "version": "2.1.18"
     },
+    "erusev/parsedown": {
+        "version": "1.7.4"
+    },
     "laminas/laminas-code": {
         "version": "3.4.1"
     },
