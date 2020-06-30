@@ -15,8 +15,6 @@ class MarkdownProcessor implements MarkdownProcessorContract
 
     public function parse(string $markdown): string
     {
-        dd($this->parsers);
-
         $content = $markdown;
 
         foreach ($this->parsers as $parser){

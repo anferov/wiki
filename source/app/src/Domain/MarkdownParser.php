@@ -9,9 +9,10 @@ class MarkdownParser implements ParserContract{
 
     private Parsedown $parsedown;
 
-    public function __construct(Parsedown $parsedown)
+    public function __construct()
     {
-        $this->parsedown = $parsedown;
+        $this->parsedown = new \ParsedownExtra();
+        $this->parsedown->setSafeMode(true);
     }
 
     public function parse(string $markdown): string

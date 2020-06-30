@@ -19,7 +19,7 @@ services:
       - ./source/app:/srv/www/wiki
     working_dir: /srv/www/wiki
     ports:
-      - 80:80
+      - 82:80
     depends_on:
       - "php-fpm"
 

@@ -34,3 +34,7 @@ logs:
 .PHONY: m
 m:
 	docker-compose exec -T php-fpm bash -c "php bin/console make$(E)"
+
+.PHONY: optimize
+optimize:
+	docker-compose exec -T php-fpm bash -c "composer dump-autoload -o --apcu --classmap-authoritative"
