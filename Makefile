@@ -3,10 +3,15 @@
 up:
 	docker-compose up -d
 
-# выключаем контейнеры
+# удаляем контейнеры
 .PHONY: down
 down:
 	docker-compose down
+
+# останавливем контейнеры
+.PHONY: stop
+stop:
+	docker-compose stop
 
 # проверить
 .PHONY: build
