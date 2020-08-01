@@ -17,8 +17,8 @@ class MarkdownProcessor implements MarkdownProcessorContract
     {
         $content = $markdown;
 
-        foreach ($this->parsers as $parser){
-            $content = $parser->parse($markdown);
+        foreach (array_reverse($this->parsers) as $parser){
+            $content = $parser->parse($content);
         }
 
         return $content;
