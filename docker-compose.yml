@@ -22,7 +22,13 @@ services:
       - 82:80
     depends_on:
       - "php-fpm"
+  swagger:
+    image: 'swaggerapi/swagger-generator'
+    container_name: swagger
+    ports:
+      - 80:8080
+    env_file:
+      - ./source/app/.env
 
-# swagger
 # plantuml
 # volumes
