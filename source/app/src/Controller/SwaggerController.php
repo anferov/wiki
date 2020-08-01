@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -27,6 +28,9 @@ class SwaggerController extends AbstractController
 
     public function __invoke(string $token = '/')
     {
-        return new BinaryFileResponse(New \SplFileInfo($this->publicDir . DIRECTORY_SEPARATOR . $token));
+        return new BinaryFileResponse(
+            new \SplFileInfo($this->publicDir . DIRECTORY_SEPARATOR . $token),
+            Response::HTTP_OK,
+            ["Access-Control-Allow-Origin" => "*"]);
     }
 }
