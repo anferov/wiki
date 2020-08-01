@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56a79ae2e0ae12d87b786a0f9ced91ed",
+    "content-hash": "0061d4018963590f201792ee5d390e66",
     "packages": [
         {
             "name": "brick/math",
@@ -3790,7 +3790,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.1.2",
+            "version": "v5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",

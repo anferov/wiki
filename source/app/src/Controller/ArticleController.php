@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/{token}", name="share", requirements={"token"=".+"})
+ * @Route("parser/{token}", name="parser", requirements={"token"=".+"})
  */
 class ArticleController extends AbstractController
 {

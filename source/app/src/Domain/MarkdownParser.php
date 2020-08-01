@@ -12,7 +12,7 @@ class MarkdownParser implements ParserContract{
     public function __construct()
     {
         $this->parsedown = new \ParsedownExtra();
-        $this->parsedown->setSafeMode(true);
+        $this->parsedown->setSafeMode(false);
     }
 
     public function parse(string $markdown): string
